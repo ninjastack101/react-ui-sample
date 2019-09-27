@@ -1,0 +1,10 @@
+p {
+  color: black;
+}
+
+.file {
+  padding-bottom: 12px;
+  display: block !important;
+  text-decoration: none;
+  color: #222222;
+}

@@ -1,0 +1,13 @@
+.main {
+  width: 850px;
+  margin: auto;
+  display: table;
+}
+
+@media only screen and (max-width: 767px) {
+  .main {
+    width: 100%;
+    margin: auto;
+    display: table;
+  }
+}
