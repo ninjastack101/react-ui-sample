@@ -1,0 +1,21 @@
+.description-text .label-value {
+  width: 280px;
+}
+
+@media only screen and (max-width: 767px) {
+  .description-text .label-value {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .description-text .label-value {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .description-text .label-value {
+    width: 300px;
+  }
+}

@@ -1,0 +1,104 @@
+.requested-table {
+  width: 500px;
+  padding: 15px;
+  float: left;
+}
+
+.requested-box {
+  width: 100%;
+  border: 1px solid #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px #f3f3f3;
+}
+
+.requested-fild {
+  padding-left: 0;
+  border-bottom: 1px solid #f3f3f3;
+  margin: 0;
+  padding: 15px 0;
+}
+
+.requested-box > div:last-child ul {
+  border-bottom: none;
+}
+.requested-fild li {
+  list-style: none;
+  display: inline-flex;
+  padding: 0 15px;
+}
+
+.requested-table p {
+  margin: 0;
+}
+
+.label {
+  width: 125px;
+  font-size: 14px;
+  color: #909090;
+}
+
+.label-value {
+  font-size: 14px;
+  color: #222222;
+}
+
+.label-value p {
+  display: inline;
+}
+
+.frequency-box {
+  width: 50%;
+  float: left;
+}
+
+.cost-box {
+  width: 50%;
+  float: left;
+  border-left: 1px solid #f3f3f3 !important;
+}
+
+.renewal-box {
+  display: flex;
+}
+
+.requested-fild #avatar {
+  height: 24px;
+  width: 24px;
+  margin-right: 10px;
+  margin-top: -10px;
+}
+
+.paying-text {
+  color: #ff6448;
+  font-size: 12px;
+  padding: 15px 15px 0 0;
+}
+
+.paying-text span {
+  color: #909090;
+  display: table;
+}
+
+@media only screen and (max-width: 767px) {
+  .renewal-box {
+    display: unset;
+  }
+  .frequency-box {
+    width: 100%;
+    float: unset;
+  }
+  .cost-box {
+    width: 100%;
+    float: unset;
+  }
+  .requested-table {
+    width: auto;
+  }
+  .requested-table {
+    float: unset;
+    padding: 15px;
+  }
+  .paying-text {
+    padding: 15px 2px;
+  }
+}

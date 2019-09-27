@@ -1,0 +1,24 @@
+table {
+  border-radius: 10px;
+  border: 1px solid #e8e8e8;
+  background-color: white;
+}
+
+#request {
+  padding: 20px;
+}
+
+#message {
+  padding: 20px;
+}
+
+.content-box {
+  background: #fff;
+  display: flex;
+}
+
+@media only screen and (max-width: 767px) {
+  .content-box {
+    display: block;
+  }
+}
