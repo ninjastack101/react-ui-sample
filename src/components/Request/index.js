@@ -28,7 +28,7 @@ export default function Request({ requestJson }) {
           <div className="frequency-box">
             <Text
               title="Renewal Frequency"
-              value={`${frequency} month${frequency > 1 ? "" : "s"}`}
+              value={`${frequency} month${frequency > 1 ? "s" : ""}`}
             />
           </div>
           <div className="cost-box">
