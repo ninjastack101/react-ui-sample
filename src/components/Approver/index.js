@@ -1,15 +1,14 @@
 import React from "react";
 import "./approver.css";
+import { stringToDate } from "../../utils/";
 
 export default function Approver(props) {
   let dateElement;
   if (props.status === "accepted") {
-    let bits = props.created_date.split(/\D/);
-    let date = new Date(bits[0], --bits[1], bits[2], bits[3], bits[4]);
+    const date = stringToDate(props.created_date);
     dateElement = <div>Approved {date.toDateString()}</div>;
   } else if (props.status === "created") {
-    let bits = props.last_notified_time.split(/\D/);
-    let date = new Date(bits[0], --bits[1], bits[2], bits[3], bits[4]);
+    const date = stringToDate(props.last_notified_time);
     dateElement = <div>Last notified {date.toDateString()}</div>;
   }
   return (
@@ -19,7 +18,7 @@ export default function Approver(props) {
       </div>
       <div className="details">
         <p
-          title={props.approver.first_name + " " + props.approver.last_name}
+          title={`${props.approver.first_name} ${props.approver.last_name}`}
           className="name"
         >
           {props.approver.first_name} {props.approver.last_name}

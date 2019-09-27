@@ -3,7 +3,7 @@ import Approver from "../Approver";
 import "./approve.css";
 
 export default function Approve({ approvers }) {
-  let acceptedApprovers = approvers
+  const acceptedApprovers = approvers
     .filter(approver => {
       return approver.status === "accepted";
     })
@@ -16,7 +16,7 @@ export default function Approve({ approvers }) {
       );
     });
 
-  let createdtedApprovers = approvers
+  const createdtedApprovers = approvers
     .filter(approver => {
       return approver.status === "created";
     })

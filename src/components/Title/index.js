@@ -1,17 +1,13 @@
 import React from "react";
 import "./title.css";
 
-export default function Title({ requestJson }) {
+export default function Title({ logo, name, id }) {
   return (
     <div className="title-bar">
-      <img
-        alt="service Logo"
-        className="title-barlogo"
-        src={requestJson.service.logo}
-      ></img>
+      <img alt="service Logo" className="title-barlogo" src={logo}></img>
       <p className="title">
-        Request for {requestJson.service.name} (#
-        {requestJson.id})
+        Request for {name} (#
+        {id})
       </p>
     </div>
   );

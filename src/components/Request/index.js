@@ -5,8 +5,7 @@ import User from "../User";
 import "./request.css";
 
 export default function Request({ requestJson }) {
-  let data = requestJson;
-  let frequency = data.renewal_frequency_in_months;
+  const frequency = requestJson.renewal_frequency_in_months;
 
   return (
     <div className="requested-table">
@@ -16,45 +15,39 @@ export default function Request({ requestJson }) {
             title="Requested by"
             value={
               <User
-                name={
-                  data.requested_by.first_name +
-                  " " +
-                  data.requested_by.last_name
-                }
-                src={data.requested_by.profile_picture}
+                name={`${requestJson.requested_by.first_name} ${requestJson.requested_by.last_name}`}
+                src={requestJson.requested_by.profile_picture}
               />
             }
           />
         </div>
         <div>
-          <Text title="Cost" value={`$` + data.cost} />
+          <Text title="Cost" value={`$ ${requestJson.cost}`} />
         </div>
         <div className="renewal-box">
           <div className="frequency-box">
             <Text
               title="Renewal Frequency"
-              value={
-                frequency === 1 ? frequency + " month" : frequency + " months"
-              }
+              value={`${frequency} month${frequency > 1 ? "" : "s"}`}
             />
           </div>
           <div className="cost-box">
-            <Text title="Annual Cost" value={`$` + 12 * data.cost} />
+            <Text title="Annual Cost" value={`$ ${12 * requestJson.cost}`} />
           </div>
         </div>
         <div>
-          <Text title="Expense Account" value={data.expense_account} />
+          <Text title="Expense Account" value={requestJson.expense_account} />
         </div>
         <div>
-          <Text title="File" value={<Files files={data.files} />} />
+          <Text title="File" value={<Files files={requestJson.files} />} />
         </div>
         <div className="description-text">
-          <Text title="Description" value={data.description} />
+          <Text title="Description" value={requestJson.description} />
         </div>
       </div>
       <div className="paying-text">
-        Your company is already paying for {data.service.name} on a recurring
-        basis.
+        Your company is already paying for {requestJson.service.name} on a
+        recurring basis.
         <span> (1 instance owned by John Smith). </span>
       </div>
     </div>

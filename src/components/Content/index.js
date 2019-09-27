@@ -7,7 +7,11 @@ import "./content.css";
 export default function Content({ requestJson }) {
   return (
     <React.Fragment>
-      <Title requestJson={requestJson} />
+      <Title
+        logo={requestJson.service.logo}
+        title={requestJson.service.title}
+        id={requestJson.id}
+      />
       <div className="content-box">
         <Request requestJson={requestJson} />
         <Approve approvers={requestJson.approvers} />

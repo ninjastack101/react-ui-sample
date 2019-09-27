@@ -2,10 +2,9 @@ import React from "react";
 import "./files.css";
 
 export default function Files({ files }) {
-  let filesData = files.map((file, index) => {
-    let store = file;
-    store = store.split("/");
-    let file_name = store[store.length - 1];
+  const filesData = files.map((file, index) => {
+    const store = file.split("/");
+    const file_name = store[store.length - 1];
     return (
       <a
         key={index}

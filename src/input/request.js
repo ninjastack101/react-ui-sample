@@ -1,4 +1,4 @@
-export let requestJson = {
+export const requestJson = {
   service: {
     name: "GitHub",
     website: "https://github.com",
